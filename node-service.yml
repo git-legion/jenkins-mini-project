@@ -4,9 +4,9 @@ metadata:
   name: legions-application
 spec:
   selector:
-    app: sample-application
+    app: legions-app
   ports:
     - name: http
-      port: 8087
+      port: 8088
       targetPort: 80
   type: NodePort
