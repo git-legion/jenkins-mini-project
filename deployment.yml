@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legions-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: legions-app
+  template:
+    metadata:
+      labels:
+        app: legions-app
+    spec:
+      containers:
+      - name: legions-app
+        image: docker.io/iamthelegion/httpd:mini
+        ports:
+        - containerPort: 80
