@@ -15,5 +15,6 @@ spec:
       containers:
       - name: legions-app
         image: docker.io/iamthelegion/httpd:mini
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
