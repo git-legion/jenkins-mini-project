@@ -17,6 +17,11 @@ pipeline {
                 sh 'sudo docker images'
             }
         }
+        stage('remove container') {
+            steps {
+                sh 'sudo docker rm -f mycontainer3'
+            }
+        }
         stage('create container') {
             steps {
                 sh 'sudo docker run -itd --name mycontainer3 -p 8092:80 legion:v1'
